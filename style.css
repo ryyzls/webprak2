@@ -1,0 +1,491 @@
+/* Import Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+/* Reset & Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.6;
+  background: #f5f5f5;
+  color: #333;
+}
+
+/* LOGIN PAGE */
+body.login-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: url(bgr.jpg) no-repeat center center/cover;
+  overflow: hidden;
+}
+
+/* Login Box */
+.login-box {
+  position: relative;
+  width: 380px;
+  padding: 40px;
+  background: #06231d;
+  border-radius: 10px;
+  text-align: center;
+  color: #fff;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+}
+
+/* Garis Neon (JAGOAN NEON LU?) */
+.login-box span {
+  position: absolute;
+  display: block;
+}
+
+.login-box span:nth-child(1) {
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #e3ef26);
+  animation: anim1 1.5s linear infinite;
+}
+
+@keyframes anim1 {
+  0% {
+    left: -100%;
+  }
+
+  50%,
+  100% {
+    left: 100%;
+  }
+}
+
+.login-box span:nth-child(2) {
+  top: -100%;
+  right: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(180deg, transparent, #e3ef26);
+  animation: anim2 1.5s linear infinite;
+  animation-delay: 0.375s;
+}
+
+@keyframes anim2 {
+  0% {
+    top: -100%;
+  }
+
+  50%,
+  100% {
+    top: 100%;
+  }
+}
+
+.login-box span:nth-child(3) {
+  bottom: 0;
+  right: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(270deg, transparent, #076653);
+  animation: anim3 1.5s linear infinite;
+  animation-delay: 0.75s;
+}
+
+@keyframes anim3 {
+  0% {
+    right: -100%;
+  }
+
+  50%,
+  100% {
+    right: 100%;
+  }
+}
+
+.login-box span:nth-child(4) {
+  bottom: -100%;
+  left: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(0deg, transparent, #076653);
+  animation: anim4 1.5s linear infinite;
+  animation-delay: 1.125s;
+}
+
+@keyframes anim4 {
+  0% {
+    bottom: -100%;
+  }
+
+  50%,
+  100% {
+    bottom: 100%;
+  }
+}
+
+/* Elemen Form Login */
+.login-box h2 {
+  margin-bottom: 25px;
+  font-weight: 600;
+  color: #e3ef26;
+  font-size: 1.8rem;
+}
+
+.input-box {
+  margin: 20px 0;
+}
+
+.login-box input {
+  width: 100%;
+  padding: 12px 15px;
+  background: #111;
+  border: 1px solid #333;
+  border-radius: 8px;
+  outline: none;
+  color: #e3ef26;
+  font-size: 14px;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.login-box input:focus {
+  border-color: #e3fbce;
+  box-shadow: 0 0 10px rgba(227, 239, 38, 0.5);
+}
+
+.login-box button {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 25px;
+  background: linear-gradient(90deg, #076653, #e3ef26);
+  color: #06231d;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: box-shadow 0.3s, transform 0.2s;
+  margin-top: 10px;
+}
+
+.login-box button:hover {
+  box-shadow: 0 0 20px rgba(227, 251, 206, 0.6);
+  transform: translateY(-2px);
+}
+
+.login-box .links {
+  margin-top: 20px;
+  font-size: 14px;
+}
+
+.login-box .links p {
+  color: #e3fbce;
+}
+
+.login-box .links a {
+  color: #e3ef26;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.login-box .links a:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+
+/* HEADER */
+header {
+  background: #0c342c;
+  padding: 1.2rem;
+  color: #e3ef26;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+  text-align: center;
+  margin-bottom: 15px;
+  font-size: 2rem;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  padding: 8px 15px;
+  border-radius: 5px;
+  transition: background 0.3s, color 0.3s;
+  font-weight: 500;
+}
+
+nav ul li a:hover {
+  background: #076653;
+  color: #e3ef26;
+}
+
+/* Search Bar */
+.search-bar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  padding: 15px 0;
+}
+
+.search-bar input {
+  width: 350px;
+  padding: 10px 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  outline: none;
+  font-size: 14px;
+  transition: border-color 0.3s;
+}
+
+.search-bar input:focus {
+  border-color: #076653;
+}
+
+.search-bar button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #8b8c8d;
+  color: white;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background 0.3s, color 0.3s;
+}
+
+.search-bar button:hover {
+  background-color: #076653;
+  color: #e3ef26;
+}
+
+/* Dashboard Utama */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 30px auto;
+}
+
+/* Banner Iklan */
+.iklan-banner {
+  display: flex;
+  align-items: center;
+  background: #e3f6f5;
+  border: 2px solid #12c6e7;
+  border-radius: 12px;
+  margin: 20px 0;
+  padding: 20px;
+  gap: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.iklan-banner img {
+  width: 220px;
+  border-radius: 10px;
+}
+
+.iklan-info h3 {
+  color: #155263;
+  margin-bottom: 10px;
+}
+
+.iklan-info p {
+  font-size: 1rem;
+  color: #155263;
+}
+
+.btn-iklan {
+  display: inline-block;
+  background: #12c6e7;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 6px;
+  margin-top: 10px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background 0.3s;
+}
+
+.btn-iklan:hover {
+  background: #297fb8;
+}
+
+/* Bar AKBAR? */
+.bar {
+  background-color: #e2fbce;
+  padding: 15px;
+  margin: 25px 0;
+  border-left: 5px solid #076653;
+}
+
+.bar h2 {
+  margin: 0;
+  color: #076653;
+  font-size: 1.5rem;
+}
+
+/* Card Contain - Flexbox */
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: space-between;
+}
+
+/* Card Produk */
+.card {
+  flex: 1 1 calc(33.333% - 20px);
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+  overflow: hidden;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.card-content {
+  padding: 15px;
+}
+
+.card h3 {
+  margin-bottom: 8px;
+  color: #333;
+  font-size: 1.2rem;
+}
+
+.card p {
+  color: #666;
+  line-height: 1.5;
+  font-size: 0.95rem;
+}
+
+.card-button {
+  display: inline-block;
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 15px;
+  margin-top: 12px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: 500;
+  transition: background 0.3s;
+}
+
+.card-button:hover {
+  background: #076653;
+  color: #e3ef26;
+}
+
+/* TABEL ADMIN  */
+.tabel-container {
+  padding: 30px 20px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 40px;
+  background: #fff;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+table thead {
+  background: #076653;
+  color: #e3ef26;
+}
+
+table th,
+table td {
+  padding: 12px;
+  text-align: center;
+  border: 1px solid #ddd;
+}
+
+table th {
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+table tbody tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+table tbody tr:hover {
+  background-color: #e2fbce;
+}
+
+/* FOOTER  */
+.footer {
+  background-color: #0c342c;
+  color: #e3ef26;
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
+  font-size: 0.95rem;
+}
+
+/*  RESPONSIF  */
+@media screen and (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .search-bar input {
+    width: 250px;
+  }
+
+  .card {
+    flex: 1 1 calc(50% - 20px);
+  }
+
+  .iklan-banner {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .iklan-banner img {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .card {
+    flex: 1 1 100%;
+  }
+
+  .login-box {
+    width: 90%;
+    padding: 30px 20px;
+  }
+
+  header h1 {
+    font-size: 1.5rem;
+  }
+}
